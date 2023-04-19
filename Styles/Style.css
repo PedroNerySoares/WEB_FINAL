@@ -1,0 +1,21 @@
+.card{
+    width: 13rem; 
+    height: auto;
+}
+footer{
+    align-content: center;
+    border-top-style:solid;
+    height: 5vh;
+    background-color: aqua  ;
+}
+
+section{
+    
+    width: 80%;
+    background-color: pink  ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}

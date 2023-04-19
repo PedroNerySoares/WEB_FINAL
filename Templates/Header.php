@@ -1,5 +1,7 @@
 <?php
-  include_once("./Config/url.php")
+  include_once("./Config/url.php");
+  include_once("./Config/connection.php");
+  include_once("./Config/process.php");
 
 ?>
 
@@ -15,19 +17,21 @@
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <!-- CSS -->
-  <link rel="stylesheet" href="<?= $BASE_URL ?>css/styles.css">
+  <link rel="stylesheet" href="<?= $BASE_URL ?>Styles/Style.css">
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <!-- <a class="navbar-brand" href="<?= $BASE_URL ?>index.php"> -->
-      <img src="<?= $BASE_URL ?>img/LogoTIpo.png" alt="Agenda">
+      <!-- <img src="<?= $BASE_URL ?>img/Logotipo@.png" alt="Agenda"> -->
       </a>
       <div>
         <div class="navbar-nav">
-          <a class="nav-link active" id="home-link" href="<?= $BASE_URL ?>index.php">Agenda</a>
-          <a class="nav-link active" href="<?= $BASE_URL ?>create.php">Adicionar Contato</a>
+          <a class="nav-link active" id="home-link" href="<?= $BASE_URL ?>index.php">Home</a>
+          <a class="nav-link active" href="<?= $BASE_URL ?>create.php">Adicionar Livro</a>
+          <a class="nav-link active" href="<?= $BASE_URL ?>create.php">Quem somos nós</a>
+          <!-- <a class="nav-link active" href="<?= $BASE_URL ?>create.php">Adicionar Contato</a> -->
         </div>
       </div>
     </nav>
