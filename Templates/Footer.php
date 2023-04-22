@@ -1,4 +1,4 @@
-</article>
+
 <footer>
     <b><p>Desenvolvido por:</p></b>
 

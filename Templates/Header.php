@@ -19,9 +19,11 @@ include_once("./Config/process.php");
  
   <!-- CSS -->
   <link rel="stylesheet" href="<?= $BASE_URL ?>Styles/styles.css">
+
+  
 </head>
 
-<body>
+<body >
   <header>
     <nav>
       <div class="logo">
@@ -36,4 +38,3 @@ include_once("./Config/process.php");
       </ul>
     </nav>
   </header>
-  <article>
