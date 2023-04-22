@@ -15,16 +15,18 @@ if (!empty($data)) {
     $nome = $data["nomeDoador"] . " " . $data["sobreNomeDoador"];
     $email = $data["email"];
     $celular = $data["celular"];
+    $categoria = $data["categoria"];
     $observacao = $data["observacao"];
     $urlImg = $data["urlImage"];
 
-    $query = "INSERT INTO book (Nome, DESCRICAO, IMAGEM, DATA_CRIACAO, DOADOR) VALUES (:Nome, :DESCRICAO, :IMAGEM, :DATA_CRIACAO, :DOADOR)";
+    $query = "INSERT INTO book (Nome, DESCRICAO, IMAGEM, DATA_CRIACAO, DOADOR,CATEGORIA) VALUES (:Nome, :DESCRICAO, :IMAGEM, :DATA_CRIACAO, :DOADOR,:CATEGORIA)";
 
     $stmt = $conn->prepare($query);
 
     $stmt->bindParam(":Nome",$nomeLivro);
-    $stmt->bindParam(":DESCRICAO",$nome);
+    $stmt->bindParam(":DESCRICAO",$observacao);
     $stmt->bindParam(":IMAGEM", $urlImg );
+    $stmt->bindParam(":CATEGORIA", $categoria);
     $stmt->bindParam(":DATA_CRIACAO",date('Y/m/d'));
     $stmt->bindParam(":DOADOR",$nome);
 

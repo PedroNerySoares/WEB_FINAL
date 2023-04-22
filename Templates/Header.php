@@ -18,8 +18,9 @@ include_once("./Config/connection.php");
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
   <!-- CSS -->
+
   <link rel="stylesheet" href="<?= $BASE_URL ?>Styles/styles.css">
-  <script>
+  <!-- <script>
     function atualizarImagem() {
       const input = document.getElementById('url-input');
       const url = input.value;
@@ -41,11 +42,14 @@ include_once("./Config/connection.php");
       imagemContainer.innerHTML = '';
       imagemContainer.appendChild(imagem);
     }
-  </script>
+  </script> -->
+  
 
 </head>
 
 <body>
+<script src="../script.js"> 
+</script>
   <header>
     <nav>
       <div class="logo">

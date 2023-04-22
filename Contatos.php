@@ -9,7 +9,7 @@ include_once("./Templates/Header.php")
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="contato-nome">Nome</label>
-                    <input class="form-control" type="text" id="contato-nome" placeholder="Informe o nome" name="nome" id="nome">
+                    <input class="form-control" type="text" id="contato-nome" placeholder="Informe o nome" name="nome" id="nome" onblur ="validarTeste()">
                 </div>
 
                 <div class="form-group col-md-6">
@@ -22,14 +22,16 @@ include_once("./Templates/Header.php")
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="contato-email">Email</label>
-                    <input class="form-control" type="email" id="contato-email" placeholder="Insira o email" name="email" id="email">
+                    <input class="form-control" type="email" id="contato-email" placeholder="Insira o email" name="email" id="email" onblur="validarEmail(this)">
                 </div>
             </div>
 
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="numero-celular">Celular</label>
-                    <input type="text" class="form-control" id="numero-celular" placeholder="Insira o numero do celular" name="celular" id="celular">
+                    <input type="tel" class="form-control" id="numero-celular" placeholder="(DD) XXXXX-XXXX" name="celular" id="celular" >
+
+
                 </div>
             </div>
 

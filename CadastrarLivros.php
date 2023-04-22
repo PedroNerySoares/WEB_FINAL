@@ -21,6 +21,29 @@ include_once("./Templates/Header.php")
             <input type="text" class="form-control" id="nomeLivro" name="nomeLivro" placeholder="Digite o nome do livro" required>
         </div>
 
+        <!-- <div class=" col-md-6 row"> -->
+            <div class="form-group col-md-3">
+                <?php include_once("Templates/select.html") ?>
+            </div>
+            <!-- <div class="form-group col-md-3">
+                <label for="nome">Sobrenome:</label>
+                <input type="text" class="form-control" id="sobreNomeDoador" name="sobreNomeDoador" placeholder="Digite o Sobrenome" required>
+            </div>
+
+        </div> -->
+  
+        
+
+        <div class="form-group col-md-4">
+            <label for="phone">URL da Foto:</label>
+            <input type="text" class="form-control" id="urlImage" name="urlImage" onchange="atualizarImagem()">
+
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="observations">Observações:</label>
+            <textarea type="text" class="form-control" id="observations" name="observacao" placeholder="Insira as observações" rows="3"></textarea>
+        </div>
         <div class=" col-md-6 row">
             <div class="form-group col-md-3">
                 <label for="nome">Nome</label>
@@ -37,19 +60,10 @@ include_once("./Templates/Header.php")
             <input type="text" class="form-control" id="celular" name="celular" placeholder="Digite o telefone" required>
         </div>
 
-        <div class="form-group col-md-4">
-            <label for="phone">URL da Foto:</label>
-            <input type="text" class="form-control" id="urlImage" name="urlImage" onchange="atualizarImagem()">
 
-        </div>
-
-
-
-        <div class="form-group col-md-4">
-            <label for="observations">Observações:</label>
-            <textarea type="text" class="form-control" id="observations" name="observacao" placeholder="Insira as observações" rows="3"></textarea>
-        </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+        
     </form>
 </div>
 
