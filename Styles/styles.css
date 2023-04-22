@@ -92,6 +92,11 @@ header nav .menu li {
   float: right;
 }
 
+.conatainer_cadastro #imagem-container img {
+  width: 250px;
+  height: 250px;
+}
+
 footer {
   background-color: #f5f5f5;
   padding: 20px;

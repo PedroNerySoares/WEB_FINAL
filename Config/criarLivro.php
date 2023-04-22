@@ -1,28 +1,32 @@
 <?php
 
+use FFI\CData;
+
 session_start();
 
 include_once("connection.php");
 include_once("url.php");
 
 
-
 $data = $_POST;
 if (!empty($data)) {
-    $nome = $data["nome"] . " " . $data["sobreNome"];
+
+    $nomeLivro = $data["nomeLivro"];
+    $nome = $data["nomeDoador"] . " " . $data["sobreNomeDoador"];
     $email = $data["email"];
     $celular = $data["celular"];
     $observacao = $data["observacao"];
+    $urlImg = $data["urlImage"];
 
-    $query = "INSERT INTO contacts (name,email,phone, observations) VALUES (:name, :email, :phone, :observations)";
+    $query = "INSERT INTO book (Nome, DESCRICAO, IMAGEM, DATA_CRIACAO, DOADOR) VALUES (:Nome, :DESCRICAO, :IMAGEM, :DATA_CRIACAO, :DOADOR)";
 
     $stmt = $conn->prepare($query);
 
-    $stmt->bindParam(":name", $nome);
-    $stmt->bindParam(":email", $email);
-    $stmt->bindParam(":phone", $celular);
-    $stmt->bindParam(":observations",  $observacao);
-
+    $stmt->bindParam(":Nome",$nomeLivro);
+    $stmt->bindParam(":DESCRICAO",$nome);
+    $stmt->bindParam(":IMAGEM", $urlImg );
+    $stmt->bindParam(":DATA_CRIACAO",date('Y/m/d'));
+    $stmt->bindParam(":DOADOR",$nome);
 
 
     try {
