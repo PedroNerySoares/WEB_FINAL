@@ -51,7 +51,7 @@ header nav .menu li {
   justify-content: flex-start;
   align-items: stretch;
   background-color: #FFF;
-  padding: 1rem 2rem;
+  padding: 2rem 22rem;
   width: 135rem;
   height: 70%;
 }
@@ -92,7 +92,7 @@ header nav .menu li {
   float: right;
 }
 
-.conatainer_cadastro #imagem-container img {
+#imagem-container img {
   width: 250px;
   height: 250px;
 }
