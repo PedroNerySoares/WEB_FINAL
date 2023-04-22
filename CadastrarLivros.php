@@ -6,8 +6,13 @@ include_once("./Templates/Header.php")
 <div class="container_cadastro">
     <!-- <?php include_once("templates/backbtn.html"); ?> -->
     <h1 id="main-title">Doe seu Livro</h1>
-
+<!-- 
     <div id="imagem-container">
+    </div> -->
+
+
+    <div id="card">
+        <img id="card-img" src="placeholder.jpg" style="display: none;">
     </div>
     <form id="create-form" action="<?= $BASE_URL ?>config/criarLivro.php" method="POST">
         <input type="hidden" name="type" value="create">
