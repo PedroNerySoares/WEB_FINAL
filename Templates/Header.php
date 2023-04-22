@@ -1,7 +1,7 @@
 <?php
 include_once("./Config/url.php");
 include_once("./Config/connection.php");
-include_once("./Config/process.php");
+
 
 ?>
 

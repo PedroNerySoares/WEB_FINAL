@@ -4,17 +4,17 @@ include_once("./Templates/Header.php")
 
 <section id="contatos">
     <h2>Contato</h2>
-    <form>
+    <form action="<?= $BASE_URL ?>config/criarContato.php" method="POST">
         <fieldset>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="contato-nome">Nome</label>
-                    <input class="form-control" type="text" id="contato-nome" placeholder="Informe o nome">
+                    <input class="form-control" type="text" id="contato-nome" placeholder="Informe o nome" name="nome" id="nome">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="contato-sobrenome">Sobrenome</label>
-                    <input class="form-control" type="text" id="contato-sobrenome" placeholder="Informe o sobrenome">
+                    <input class="form-control" type="text" id="contato-sobrenome" placeholder="Informe o sobrenome" name="sobreNome" id="sobreNome">
                 </div>
             </div>
 
@@ -22,26 +22,26 @@ include_once("./Templates/Header.php")
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="contato-email">Email</label>
-                    <input class="form-control" type="email" id="contato-email" placeholder="Insira o email">
+                    <input class="form-control" type="email" id="contato-email" placeholder="Insira o email" name="email" id="email">
                 </div>
             </div>
 
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="numero-celular">Celular</label>
-                    <input type="text" class="form-control" id="numero-celular" placeholder="Insira o numero do celular">
+                    <input type="text" class="form-control" id="numero-celular" placeholder="Insira o numero do celular" name="celular" id="celular">
                 </div>
             </div>
 
             <div class="row">
                 <div class="form-group col-md-9">
                     <label for="obs"></label>
-                    <textarea name="observacao" id="obs" cols="50" rows="5" placeholder="observação"></textarea>
+                    <textarea name="observacao" id="obs" cols="50" rows="5" placeholder="observação" name="observacao" id="observacao"></textarea>
                 </div>
             </div>
 
             <div class="form-group">
-                <button type="button" class="btn btn-primary btn-lg">Enviar</button>
+                <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
                 <button type="reset" class="btn btn-secundary btn-lg">Limpar</button>
             </div>
         </fieldset>

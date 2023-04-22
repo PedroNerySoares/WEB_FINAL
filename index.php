@@ -1,6 +1,7 @@
 <?php
 
 include_once("./Templates/Header.php");
+include_once("./Config/BuscarLivros.php")
 ?>
 <div class="container_pagina">
 
@@ -34,43 +35,34 @@ include_once("./Templates/Header.php");
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Aplicar filtro</button>
-            
+
         </form>
     </aside>
 
     <section id="livros-section">
 
-        <!-- <?php foreach ($books as $book) : ?>
+        <?php foreach ($books as $book) : ?>
 
-        <div class="card">
-            <img class="card-img-top" src="<?= $book["IMAGEM"] ?> alt=" Card image cap">
-            <div class="card-body">
-                <h5 class="card-title"><?= $book["Nome"]   ?></h5>
-                <p class="card-text"><?= $book["DESCRICAO"]  ?></p>
-                <p>Doador:<?= $book["DOADOR"]  ?></p>
-                <a href="#" class="btn btn-danger">Eu quero!</a>
+            <div class="card">
+                <img class="card-img-top" src="<?= $book["IMAGEM"] ?> alt=" Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $book["Nome"]   ?></h5>
+                    <p class="card-text"><?= $book["DESCRICAO"]  ?></p>
+                    <p>Doador:<?= $book["DOADOR"]  ?></p>
+                    <a href="#" class="btn btn-danger">Eu quero!</a>
+
+
+                </div>
 
 
             </div>
 
 
-        </div>
+
+        <?php endforeach; ?>
 
 
-
-    <?php endforeach; ?> -->
-
-
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
+        <!-- 
         <div class="card">
             <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
             <div class="card-body">
@@ -134,7 +126,6 @@ include_once("./Templates/Header.php");
             </div>
         </div>
 
-
         <div class="card">
             <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
             <div class="card-body">
@@ -184,6 +175,16 @@ include_once("./Templates/Header.php");
             </div>
         </div>
 
+
+        <div class="card">
+            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
+                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+ -->
 
 
 
