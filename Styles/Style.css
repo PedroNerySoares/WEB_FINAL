@@ -7,6 +7,8 @@ footer{
     border-top-style:solid;
     height: 5vh;
     background-color: aqua  ;
+    bottom:0;
+    
 }
 
 section{
@@ -18,4 +20,32 @@ section{
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+    align-self: center;
 }
+#conteiner{
+    background-image: url(img/livro.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+
+#contatos{
+    margin-top: 20px;
+}
+
+form{
+    width: 100%;
+    font-size: 16px;
+    color: #666;
+}
+
+form fieldset{ 
+    border: 1px solid #999;   
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
