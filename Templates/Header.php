@@ -24,13 +24,13 @@ include_once("./Config/process.php");
   <header>
     <nav>
       <div class="logo">
-        <img src="<?= $BASE_URL ?>img/Logo.jpeg" alt="Logo">
+        <img src="<?= $BASE_URL ?>img/Logo2.png" alt="Logo">
       </div>
       <ul class="menu">
         <li><a href="<?= $BASE_URL ?>index.php">Home</a></li>
-        <li><a href="<?= $BASE_URL ?>">Item de menu 2</a></li>
-        <li><a href="<?= $BASE_URL ?>">Item de menu 3</a></li>
-        <li><a href="<?= $BASE_URL ?>">Item de menu 4</a></li>
+        <li><a href="<?= $BASE_URL ?>CadastrarLivros.php">Cadastrar Livros</a></li>
+        <li><a href="<?= $BASE_URL ?>QuemSomos.php">Quem Somos</a></li>
+        <li><a href="<?= $BASE_URL ?>Contatos.php">Contato</a></li>
       </ul>
     </nav>
   </header>
