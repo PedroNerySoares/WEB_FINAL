@@ -5,7 +5,6 @@ include_once("url.php");
 session_start();
 
 $filtro = $_GET["categoria"];
-    echo ($filtro);
 
 if (is_null($filtro)) {
     $query = "SELECT * FROM book";
