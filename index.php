@@ -6,7 +6,7 @@ include_once("./Templates/Header.php");
 ?>
 
 
-
+<!-- 
 <section>
     <?php foreach ($books as $book) : ?>
         <div class="card">
@@ -29,7 +29,7 @@ include_once("./Templates/Header.php");
     <?php endforeach; ?>
 
 
-</section>
+</section> -->
 
 <?php
 include_once("./Templates/Footer.php");
