@@ -113,3 +113,15 @@ footer img {
   height: 30px;
 }/*# sourceMappingURL=styles.css.map */
 
+#centro{
+  width: 10rem;
+  margin: 1rem;
+  align-self: center;
+  
+}
+
+#eu{
+  border: 2px solid #f95842 ;
+  margin-right: 300px;
+
+}
