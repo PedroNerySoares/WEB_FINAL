@@ -6,7 +6,7 @@ include_once("./Templates/Header.php")
 <div class="container_cadastro" id="conteudo_cadlivro">
     <!-- <?php include_once("templates/backbtn.html"); ?> -->
     <h1 id="main-title">Doe seu Livro</h1>
-<!-- 
+    <!-- 
     <div id="imagem-container">
     </div> -->
 
@@ -21,18 +21,10 @@ include_once("./Templates/Header.php")
             <input type="text" class="form-control" id="nomeLivro" name="nomeLivro" placeholder="Digite o nome do livro" required>
         </div>
 
-        <!-- <div class=" col-md-6 row"> -->
-            <div class="form-group col-md-3">
-                <?php include_once("Templates/select.html") ?>
-            </div>
-            <!-- <div class="form-group col-md-3">
-                <label for="nome">Sobrenome:</label>
-                <input type="text" class="form-control" id="sobreNomeDoador" name="sobreNomeDoador" placeholder="Digite o Sobrenome" required>
-            </div>
+        <div class="form-group col-md-3">
+            <?php include_once("Templates/select.html") ?>
+        </div>
 
-        </div> -->
-  
-        
 
         <div class="form-group col-md-4">
             <label for="phone">URL da Foto:</label>
@@ -63,7 +55,7 @@ include_once("./Templates/Header.php")
 
         <button type="submit" class="btn btn-primary">Cadastrar</button>
 
-        
+
     </form>
 </div>
 
