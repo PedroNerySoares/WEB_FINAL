@@ -6,27 +6,27 @@ session_start();
 
 $filtro = $_GET["categoria"];
 
-if (is_null($filtro)) {
-    $query = "SELECT * FROM book";
+if (is_null($filtro) or $filtro==="" ) {
+  $query = "SELECT * FROM book";
+  // echo($data["categoria"]);
+
+  $stmt = $conn->prepare($query);
 
 
-    $stmt = $conn->prepare($query);
+  $stmt->execute();
 
-
-    $stmt->execute();
-
-    $books = $stmt->fetchAll();
+  $books = $stmt->fetchAll();
 } else {
-   
-    $query = "SELECT * FROM book WHERE CATEGORIA=:CATEGORIA";
 
-    $stmt = $conn->prepare($query);
-      $stmt = $conn->prepare($query);
-      $stmt->bindParam(":CATEGORIA", $filtro);
+  $query = "SELECT * FROM book WHERE CATEGORIA=:CATEGORIA";
 
-    $stmt->execute();
+  $stmt = $conn->prepare($query);
+  $stmt = $conn->prepare($query);
+  $stmt->bindParam(":CATEGORIA", $filtro);
 
-    $books = $stmt->fetchAll();
+  $stmt->execute();
+
+  $books = $stmt->fetchAll();
 
 }
 

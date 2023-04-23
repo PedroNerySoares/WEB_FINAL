@@ -68,9 +68,12 @@ header {
     display: flex;
 
     aside {
-        width: 15rem;
+        width: 22rem;
         height: 100%;
-        background-color: gray;
+        // background-color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         float: left;
     }
 
@@ -80,17 +83,9 @@ header {
         justify-content: flex-start;
         align-items: stretch;
         background-color: #FFF;
-        padding: 2rem 22rem;
-
-        // padding-left: 50px;
-        // padding-right: 150px;
-
+        padding: 2rem 5rem;
         width: 135rem;
         height: 70%;
-
-
-
-
 
     }
 }
@@ -98,8 +93,21 @@ header {
 
 .card {
 
-    width: 10rem;
+    
+    width: 12rem;
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: stretch;
+      }
 }
 
 #conteudo_sobrenos {
@@ -107,7 +115,7 @@ header {
     min-height: 900px;
     height: auto;
     margin: auto;
-    background-image: url('../img/fundo_cadastro.jpeg');
+    background-image: url('../img/livro.png');
     background-repeat: no-repeat;
     background-position: right bottom;
 
@@ -144,10 +152,10 @@ header {
 
 #imagem-container {
 
-        img {
-            width: 250px;
-            height: 250px;
-        }
+    img {
+        width: 250px;
+        height: 250px;
+    }
 
 }
 
@@ -172,24 +180,25 @@ footer {
 
 }
 
-#conteudo_cadlivro{
+#conteudo_cadlivro {
     width: 900px;
     height: auto;
     margin: auto;
-    background-image: url('../img/fundo_cadastro.jpeg');
+    background-image: url('../img/livro.png');
     background-repeat: no-repeat;
     background-position: right bottom;
 }
 
-#conteudo_contact{
+#conteudo_contact {
     width: 900px;
     height: auto;
     margin: auto;
-    background-image: url('../img/fundo_cadastro.jpeg');
+    background-image: url('../img/livro.png');
     background-repeat: no-repeat;
     background-position: right bottom;
 }
 
-h1,h2{
+h1,
+h2 {
     text-align: center;
 }

@@ -40,9 +40,11 @@ header nav .menu li {
   display: flex;
 }
 .container_pagina aside {
-  width: 15rem;
+  width: 22rem;
   height: 100%;
-  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   float: left;
 }
 .container_pagina #livros-section {
@@ -51,14 +53,25 @@ header nav .menu li {
   justify-content: flex-start;
   align-items: stretch;
   background-color: #FFF;
-  padding: 2rem 22rem;
+  padding: 2rem 5rem;
   width: 135rem;
   height: 70%;
 }
 
 .card {
-  width: 10rem;
+  width: 12rem;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 #conteudo_sobrenos {
@@ -66,7 +79,7 @@ header nav .menu li {
   min-height: 900px;
   height: auto;
   margin: auto;
-  background-image: url("../img/fundo_cadastro.jpeg");
+  background-image: url("../img/livro.png");
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -111,5 +124,27 @@ footer p {
 footer img {
   width: 30px;
   height: 30px;
-}/*# sourceMappingURL=styles.css.map */
+}
 
+#conteudo_cadlivro {
+  width: 900px;
+  height: auto;
+  margin: auto;
+  background-image: url("../img/livro.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+#conteudo_contact {
+  width: 900px;
+  height: auto;
+  margin: auto;
+  background-image: url("../img/livro.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+h1,
+h2 {
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
