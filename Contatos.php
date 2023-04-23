@@ -2,7 +2,7 @@
 include_once("./Templates/Header.php")
 ?>
 
-<div id="conteudo_contato">
+<div id="conteudo_contact">
     <section id="contatos">
         <h2>Contato</h2>
         <form action="<?= $BASE_URL ?>config/criarContato.php" method="POST">
