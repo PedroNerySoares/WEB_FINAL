@@ -3,7 +3,7 @@ include_once("./Templates/Header.php")
 ?>
 
 
-<div class="container_cadastro">
+<div class="container_cadastro" id="conteudo_cadlivro">
     <!-- <?php include_once("templates/backbtn.html"); ?> -->
     <h1 id="main-title">Doe seu Livro</h1>
 <!-- 
