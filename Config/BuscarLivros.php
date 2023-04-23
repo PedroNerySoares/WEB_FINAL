@@ -4,7 +4,7 @@ include_once("url.php");
 
 session_start();
 
-$filtro = $_GET["categoria"];
+$filtro = $_GET["genero"];
 
 if (is_null($filtro) or $filtro==="" ) {
   $query = "SELECT * FROM book";
@@ -18,11 +18,11 @@ if (is_null($filtro) or $filtro==="" ) {
   $books = $stmt->fetchAll();
 } else {
 
-  $query = "SELECT * FROM book WHERE CATEGORIA=:CATEGORIA";
+  $query = "SELECT * FROM book WHERE GENERO=:GENERO";
 
   $stmt = $conn->prepare($query);
   $stmt = $conn->prepare($query);
-  $stmt->bindParam(":CATEGORIA", $filtro);
+  $stmt->bindParam(":GENERO", $filtro);
 
   $stmt->execute();
 

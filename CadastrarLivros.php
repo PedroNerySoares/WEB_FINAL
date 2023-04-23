@@ -23,7 +23,10 @@ include_once("./Templates/Header.php")
             </div>
 
             <div class="form-group col-md-3">
-                <?php include_once("Templates/select.html") ?>
+                <?php include_once("Templates/selectCategoria.html") ?>
+            </div>
+            <div class="form-group col-md-3">
+                <?php include_once("Templates/selectCondicao.html") ?>
             </div>
 
 
@@ -38,11 +41,11 @@ include_once("./Templates/Header.php")
                 <textarea type="text" class="form-control" id="observations" name="observacao" placeholder="Insira as observações" rows="3"></textarea>
             </div>
             <div class=" col-md-6 row">
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-5">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control" id="nomeDoador" name="nomeDoador" placeholder="Digite o primeiro nome" required>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-5">
                     <label for="nome">Sobrenome:</label>
                     <input type="text" class="form-control" id="sobreNomeDoador" name="sobreNomeDoador" placeholder="Digite o Sobrenome" required>
                 </div>

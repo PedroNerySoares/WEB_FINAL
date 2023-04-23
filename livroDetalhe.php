@@ -1,6 +1,7 @@
 <?php
 
 include_once("./Templates/Header.php");
+include_once("./Config/BuscaLivroDetalhe.php");
 // include_once("./Config/BuscarLivros.php");
 // // include_once("./Config/emai.php")
 
@@ -8,14 +9,13 @@ include_once("./Templates/Header.php");
 // $string = "Olá, ví seu anúncio do Livro (XXXXXXXXXXX) no AdoBook. Ainda esta disponível? ";
 // echo ($api_what . str_replace(" ", "%20", $string));
 
-$data = $_GET;
 ?>
 <section id="doador">
     <h2>Doador</h2>
     <form>
         <fieldset>
             <div id="campo_imagem">
-                <img src="img/vilela.jpg" alt="vilela" class="left" id="eu">
+                <img src="<?= $book["IMAGEM"] ?>" alt="vilela" class="left" id="eu">
             </div>
 
 
@@ -23,7 +23,7 @@ $data = $_GET;
                 <div class="row">
                     <div class="form-group col-md-12">
                         <label for="livro-nome">Nome do Livro</label>
-                        <input class="form-control" type="text" id="livro-nome" placeholder="Nome do livro" disabled>
+                        <input class="form-control" type="text" id="livro-nome" value="<?= $book["Nome"] ?>" disabled>
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@ $data = $_GET;
                 <div class="form-group col-md-10">
                     <label for="cadastro">Gênero</label>
                     <select name="cadastro" id="cadastro" disabled>
-                        <option value="sdas">teste</option>
+                        <option value="sdas"><?= $book["GENERO"] ?></option>
                     </select>
                 </div>
 
@@ -46,7 +46,7 @@ $data = $_GET;
                 <div class="row">
                     <div class="form-group col-md-9">
                         <label for="obs"></label>
-                        <textarea name="observacao" id="obs" cols="50" rows="5" placeholder="observação" disabled></textarea>
+                        <textarea name="observacao" id="obs" cols="50" rows="5"  disabled><?= $book["DESCRICAO"] ?></textarea>
                     </div>
                 </div>
 

@@ -20,7 +20,7 @@ if (!empty($data)) {
 
     $stmt->bindParam(":name", $nome);
     $stmt->bindParam(":email", $email);
-    $stmt->bindParam(":phone", $celular);
+    $stmt->bindParam(":celular", $celular);
     $stmt->bindParam(":observations",  $observacao);
 
 

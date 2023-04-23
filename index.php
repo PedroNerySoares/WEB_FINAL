@@ -4,9 +4,11 @@ include_once("./Templates/Header.php");
 include_once("./Config/BuscarLivros.php");
 // include_once("./Config/emai.php")
 
-$api_what = "https://api.whatsapp.com/send?phone=5521970351912&text=";
-$string = "Olá, ví seu anúncio do Livro (XXXXXXXXXXX) no AdoBook. Ainda esta disponível? ";
-echo ($api_what . str_replace(" ", "%20", $string));
+// $api_what = "https://api.whatsapp.com/send?phone=5521970351912&text=";
+// $string = "Olá, ví seu anúncio do Livro (XXXXXXXXXXX) no AdoBook. Ainda esta disponível? ";
+// echo ($api_what . str_replace(" ", "%20", $string));
+
+
 
 ?>
 <div class="container_pagina">
@@ -16,7 +18,7 @@ echo ($api_what . str_replace(" ", "%20", $string));
         <form id="filtro-form" method="GET">
             <div class="mb-3">
 
-                <?php include_once("Templates/selectCategoria.html") ?>
+                <?php include_once("Templates/selectGenero.html") ?>
             </div>
             <div class="mb-3">
 
@@ -32,7 +34,7 @@ echo ($api_what . str_replace(" ", "%20", $string));
     <section id="livros-section">
 
         <?php foreach ($books as $book) : ?>
-
+            
             <div class="card">
                 <!-- <img class="card-img-top" src="<?= $book["IMAGEM"] ?> alt=" Card image cap"> -->
                 <img class="card-img-top" "> 
@@ -42,9 +44,11 @@ echo ($api_what . str_replace(" ", "%20", $string));
 
                 <div class="card-body">
                     <h5 class="card-title"><?= $book["Nome"]   ?></h5>
-                    <p class="card-text"><?= $book["DESCRICAO"]  ?></p>
-                    <p>Doador:<?= $book["DOADOR"]  ?></p>
-                    <a href="<?= $BASE_URL ?>livroDetalhe.php?id<?= $book["ID"]?>" class="btn btn-danger">Eu quero!</a>
+                    <!-- <p class="card-text"><?= $book["DESCRICAO"]  ?></p> -->
+                    <b><p>Doador:</b><?= $book["DOADOR"]  ?></p>
+                    <b><p>Postado:</b><?= $book["DATA_CRIACAO"]  ?></p>
+                    
+                    <a href="<?= $BASE_URL ?>livroDetalhe.php?id=<?= $book["ID"] ?>" class="btn btn-danger">Eu quero!</a>
 
 
                 </div>
