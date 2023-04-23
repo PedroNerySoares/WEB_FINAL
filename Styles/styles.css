@@ -112,3 +112,9 @@ footer img {
   width: 30px;
   height: 30px;
 }/*# sourceMappingURL=styles.css.map */
+
+#conteudo_contato{
+  width: 900px;
+  height: auto;
+  margin: auto;
+}
