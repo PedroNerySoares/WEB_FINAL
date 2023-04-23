@@ -7,22 +7,15 @@ include_once("./Config/BuscarLivros.php")
 
     <aside>
         <h2>Filtro</h2>
-        <form id="filtro-form"  method="GET">
+        <form id="filtro-form" method="GET">
             <div class="mb-3">
 
                 <?php include_once("Templates/select.html") ?>
             </div>
-            <div class="mb-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="desconto" id="desconto" name="desconto">
-                    <label class="form-check-label" for="desconto">
-                        Mostrar somente itens com desconto
-                    </label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Aplicar filtro</button>
-            <button type="submit" class="btn btn-danger">Limpar Filtro</button>
-            
+
+            <button type="submit" class="mb-3 btn btn-primary">Aplicar filtro</button>
+            <button type="submit" class="mb-3 btn btn-danger">Limpar Filtro</button>
+
         </form>
     </aside>
 

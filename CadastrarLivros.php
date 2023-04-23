@@ -29,7 +29,7 @@ include_once("./Templates/Header.php")
 
             <div class="form-group col-md-4">
                 <label for="phone">URL da Foto:</label>
-                <input type="text" class="form-control" id="urlImage" name="urlImage" onchange="atualizarImagem()">
+                <input type="text" class="form-control" id="urlImage" name="urlImage" >
 
             </div>
 
