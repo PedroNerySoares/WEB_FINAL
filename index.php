@@ -44,8 +44,8 @@ echo ($api_what . str_replace(" ", "%20", $string));
                     <h5 class="card-title"><?= $book["Nome"]   ?></h5>
                     <p class="card-text"><?= $book["DESCRICAO"]  ?></p>
                     <p>Doador:<?= $book["DOADOR"]  ?></p>
-                    <a href="#" class="btn btn-danger">Eu quero!</a>
-                    
+                    <a href="<?= $BASE_URL ?>livroDetalhe.php?id<?= $book["ID"]?>" class="btn btn-danger">Eu quero!</a>
+
 
                 </div>
 

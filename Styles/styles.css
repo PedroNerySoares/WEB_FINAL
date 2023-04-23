@@ -147,14 +147,13 @@ footer img {
 h1,
 h2 {
   text-align: center;
-}/*# sourceMappingURL=styles.css.map */
-
-#campo_imagem{
+}
+/* 
+#campo_imagem {
   width: 10rem;
   margin: 1rem;
   align-self: center;
-  border: 2px solid #f95842 ;
+  border: 2px solid #f95842;
   margin-right: 300px;
-  
-}
-/*#retirei o id "eu" e da imagem do doar e deixei todas as alterações no campo_imagem
+} */
+/*# sourceMappingURL=styles.css.map */

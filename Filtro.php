@@ -9,13 +9,7 @@ include_once("./Config/BuscarLivros.php")
         <h2>Filtro</h2>
         <form id="filtro-form">
             <div class="mb-3">
-                <!-- <label for="categoria" class="form-label">Categoria:</label>
-                <select class="form-select" id="categoria" name="categoria">
-                    <option value="">Todas as categorias</option>
-                    <option value="livros">Livros</option>
-                    <option value="eletronicos">Eletrônicos</option>
-                    <option value="roupas">Roupas</option>
-                </select> -->
+
                 <?php include_once("Templates/select.html") ?>
             </div>
             <div class="mb-3">
