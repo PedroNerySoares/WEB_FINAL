@@ -30,7 +30,7 @@ include_once("./Config/BuscarLivros.php")
                     <p class="card-text"><?= $book["DESCRICAO"]  ?></p>
                     <p>Doador:<?= $book["DOADOR"]  ?></p>
                     <a href="#" class="btn btn-danger">Eu quero!</a>
-
+                    
 
                 </div>
 
