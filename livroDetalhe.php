@@ -1,51 +1,54 @@
 <?php
 
-include_once("./Templates/Header.php");
-include_once("./Config/BuscaLivroDetalhe.php");
+include_once('./Templates/Header.php');
+include_once('./Config/BuscaLivroDetalhe.php');
 
 
-$api_what = "https://api.whatsapp.com/send?phone=5521" . $book["CELULAR"] . "&text=";
-$string =   "Olá " . $book["DOADOR"] . ", ví seu anúncio do Livro " . $book["Nome"] . " no *AdoBook*."
-    . "Ainda esta disponível? ";
+$api_what = 'https://api.whatsapp.com/send?phone=5521' . $book['CELULAR'] . '&text=';
+$string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['Nome'] . ' no *AdoBook*.'
+    . 'Ainda esta disponível? ';
 
 ?>
-<section id="doador" class="form_campo">
+<section id='doador' class='form_campo'>
     <h2>Doador</h2>
     <form>
-        <fieldset>
-            <div id="campo_imagem">
-                <img src="<?= $book["IMAGEM"] ?>" alt="Capa do livro <?= $book["Nome"] ?>" class="left" id="eu" onerror="this.onerror=null;this.src='./img/LivroDefault.jpg';">
+        <fieldset name='formulario' id='idform' onsubmit='return validarDadosObrigatorios(this)'>
+            <div id='campo_imagem'>
+                <img src='<?= $book['IMAGEM'] ?>' alt='Capa do livro <?= $book['Nome'] ?>' class='left' id='eu' onerror='this.onerror=null;this.src='./img/LivroDefault.jpg';'>
             </div>
 
 
-            <div class="row">
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label for="livro-nome">Nome do Livro</label>
-                        <input class="form-control" type="text" id="livro-nome" value="<?= $book["Nome"] ?>" disabled>
+            <div class='row'>
+                <div class='row'>
+                    <div class='form-group col-md-12'>
+                        <label for='livro-nome'>Nome do Livro</label>
+                        <input class='form-control' type='text' id='livro-nome' value='<?= $book['Nome'] ?>' disabled>
                     </div>
                 </div>
 
+                
 
-                <div class="form-group col-md-10">
-                    <label for="cadastro">Gênero</label>
-                    <select name="cadastro" id="cadastro" disabled>
-                        <option value="sdas"><?= $book["GENERO"] ?></option>
+
+
+                <div class='form-group col-md-5'>
+                    <label for='genero'>Gênero</label>
+                    <select name='genero' id='genero' disabled>
+                        <option value='sdas'><?= $book['GENERO'] ?></option>
                     </select>
                 </div>
 
 
-                <div class="form-group col-md-6">
-                    <label for="estado">Estado</label>
-                    <select name="estado" id="estado" disabled>
-                        <option value=""><?= $book["CONDICAO"] ?></option>
+                <div class='form-group col-md-6'>
+                    <label for='condicoes'>Condição</label>
+                    <select name='condicoes' id='condicoes' disabled>
+                        <option value='><?= $book['CONDICAO'] ?></option>
                     </select>
                 </div>
 
-                <div class="row">
-                    <div class="form-group col-md-9">
-                        <label for="obs"></label>
-                        <textarea name="observacao" id="obs" cols="50" rows="5" disabled><?= $book["DESCRICAO"] ?></textarea>
+                <div class='row'>
+                    <div class='form-group col-md-9'>
+                        <label for='obs'></label>
+                        <textarea name='observacao' id='obs' cols='50' rows='5' disabled><?= $book['DESCRICAO'] ?></textarea>
                     </div>
                 </div>
 
@@ -54,27 +57,27 @@ $string =   "Olá " . $book["DOADOR"] . ", ví seu anúncio do Livro " . $book["
 
 
 
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="contato-nome">Nome</label>
-                    <input class="form-control" type="text" id="contato-nome" placeholder="Informe o nome" require>
+            <div class='row'>
+                <div class='form-group col-md-6'>
+                    <label for='contato-nome'>Nome</label>
+                    <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' require onblur='velidarnome(this)'>
                 </div>
 
-                <div class="form-group col-md-6">
-                    <label for="contato-sobrenome">Sobrenome</label>
-                    <input class="form-control" type="text" id="contato-sobrenome" placeholder="Informe o sobrenome" require>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="form-group col-md-6">
-                    <label for="contato-email">Email</label>
-                    <input class="form-control" type="email" id="contato-email" placeholder="Insira o email" require>
+                <div class='form-group col-md-6'>
+                    <label for='contato-sobrenome'>Sobrenome</label>
+                    <input class='form-control' type='text' id='contato-sobrenome' placeholder='Informe o sobrenome' require onblur='validarsobrenome(this)'>
                 </div>
             </div>
 
-            <a href="<?= $api_what . $string ?>" class="btn btn-primary" target="_blank">Entrar em Contato</a>
+
+            <div class='row'>
+                <div class='form-group col-md-6'>
+                    <label for='contato-email'>Email</label>
+                    <input class='form-control' type='email' id='contato-email' placeholder='Insira o email' require onblur='validarEmail(this)'>
+                </div>
+            </div>
+
+            <a href='<?= $api_what . $string ?>' class='btn btn-primary' target='_blank'>Entrar em Contato</a>
 
 
         </fieldset>
@@ -82,5 +85,5 @@ $string =   "Olá " . $book["DOADOR"] . ", ví seu anúncio do Livro " . $book["
 </section>
 
 <?php
-include_once("./Templates/Footer.php");
+include_once('./Templates/Footer.php');
 ?>
