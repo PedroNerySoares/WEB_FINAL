@@ -24,11 +24,8 @@ include_once("./Config/BuscarLivros.php");
 
                 <?php include_once("Templates/selectCondicao.html") ?>
             </div>
-<!-- 
-            <button type="submit" class="mb-3 btn btn-primary">Aplicar filtro</button>
-            <button type="submit" class="mb-3 btn btn-danger">Limpar Filtro</button> -->
+
             <input type="submit" href="<?= $BASE_URL ?>filtro.php" value="Aplicar Filtro" class="mb-3 btn  btn btn-primary">
-            <!-- <a >Limpar Filtro</a> -->
             <br>
             <a href="<?= $BASE_URL ?>index.php" class="mb-3 btn btn-danger" > Limpar </a>
         </form>
@@ -49,7 +46,8 @@ include_once("./Config/BuscarLivros.php");
                     <h5 class="card-title"><?= $book["Nome"]   ?></h5>
                     <!-- <p class="card-text"><?= $book["DESCRICAO"]  ?></p> -->
                     <b><p>Doador:</b><?= $book["DOADOR"]  ?></p>
-                    <b><p>Postado:</b><?= $book["DATA_CRIACAO"]  ?></p>
+                    <b><p>Postado:</b><?= 
+                         date('d/m/Y', strtotime($book["DATA_CRIACAO"]))              ?></p>
                     
                     <a href="<?= $BASE_URL ?>livroDetalhe.php?id=<?= $book["ID"] ?>" class="btn btn-danger">Eu quero!</a>
 
