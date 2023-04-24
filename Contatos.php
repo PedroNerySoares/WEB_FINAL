@@ -11,12 +11,12 @@ include_once('./Templates/Header.php')
                     <div class='row'>
                         <div class='form-group col-md-4'>
                             <label for='contato-nome'>Nome</label>
-                            <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' name='nome' id='nome' onblur ='validarnome(this)'>
+                            <input class='form-control' type='text' id='contato-nome' maxlength="20" placeholder='Informe o nome' name='nome' id='nome' onblur ='validarnome(this)'>
                         </div>
 
                         <div class='form-group col-md-4'>
                             <label for='contato-sobrenome'>Sobrenome</label>
-                            <input class='form-control' type='text' id='contato-sobrenome' placeholder='Informe o sobrenome' name='sobreNome' id='sobreNome'>
+                            <input class='form-control' type='text' id='contato-sobrenome' maxlength="20" placeholder='Informe o sobrenome' name='sobreNome' id='sobreNome'>
                         </div>
                     </div>
 
@@ -40,7 +40,7 @@ include_once('./Templates/Header.php')
                     <div class='row'>
                         <div class='form-group col-md-9'>
                             <label for='obs'></label>
-                            <textarea name='observacao' id='obs' cols='50' rows='5' placeholder='observação' name='observacao' id='observacao'></textarea>
+                            <textarea name='observacao' id='obs' cols='50' rows='5' maxlength="255"placeholder='observação' name='observacao' id='observacao'></textarea>
                         </div>
                     </div>
 

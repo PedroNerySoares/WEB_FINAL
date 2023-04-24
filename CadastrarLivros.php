@@ -14,7 +14,7 @@ include_once('./Templates/Header.php')
             <input type='hidden' name='type' value='create'>
             <div class='form-group col-md-6'>
                 <label for='name'>Nome do Livro:</label>
-                <input type='text' class='form-control' id='nomeLivro' name='nomeLivro' placeholder='Digite o nome do livro' required>
+                <input type='text' class='form-control' id='nomeLivro' maxlength="50" name='nomeLivro' placeholder='Digite o nome do livro' required>
             </div>
 
             <div class='form-group col-md-3'>
@@ -33,22 +33,22 @@ include_once('./Templates/Header.php')
 
             <div class='form-group col-md-6'>
                 <label for='observations'>Observações:</label>
-                <textarea type='text' class='form-control' id='observations' name='observacao' placeholder='Insira as observações' rows='3'></textarea>
+                <textarea type='text' class='form-control' id='observations' maxlength="100" name='observacao' placeholder='Insira as observações' rows='3'></textarea>
             </div>
             <div class=' col-md-6 row'>
                 <div class='form-group col-md-6'>
                     <label for='nome'>Nome</label>
-                    <input type='text' class='form-control' id='nomeDoador' name='nomeDoador' placeholder='Digite o primeiro nome' required onblur='validarnome(this)'>
+                    <input type='text' class='form-control' id='nomeDoador' name='nomeDoador' maxlength="20" placeholder='Digite o primeiro nome' required onblur='validarnome(this)'>
                 </div>
                 <div class='form-group col-md-6'>
                     <label for='nome'>Sobrenome:</label>
-                    <input type='text' class='form-control' id='sobreNomeDoador' name='sobreNomeDoador' placeholder='Digite o Sobrenome' required >
+                    <input type='text' class='form-control' id='sobreNomeDoador' maxlength="20" name='sobreNomeDoador' placeholder='Digite o Sobrenome' required >
                 </div>
 
             </div>
             <div class='form-group col-md-6'>
                 <label for='phone'>Telefone do contato:</label>
-                <input type='text' class='form-control' id='celular' name='celular' placeholder='Digite o telefone' oninput="formatarCelular(this)" maxlength ="15">
+                <input type='text' class='form-control'  placeholder='(DD) XXXXX-XXXX' id='celular' name='celular' placeholder='Digite o telefone' oninput="formatarCelular(this)" maxlength ="15">
             </div>
 
 
