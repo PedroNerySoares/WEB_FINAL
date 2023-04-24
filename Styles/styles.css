@@ -143,6 +143,7 @@ footer img {
   background-image: url("../img/livro.png");
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-color: #f5f5f5;
 }
 
 h1,
@@ -151,11 +152,14 @@ h2 {
 }
 
 #campo_imagem {
-  width: 10rem;
-  margin-left: 280px;
+  width: 1rem;
+  margin-left: 80px;
   align-self: center;
-  border: 2px solid #f95842;
-  margin-right: 300px;
+  margin-right: 350px;
+}
+#campo_imagem img {
+  width: 300px;
+  height: 300px;
 }
 
 @media screen and (max-width: 899px) {
@@ -193,4 +197,23 @@ h2 {
   width: 900px;
   height: auto;
   margin-left: 280px;
+}
+
+#DadosLivro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-around;
+}
+#DadosLivro #INFO {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }/*# sourceMappingURL=styles.css.map */

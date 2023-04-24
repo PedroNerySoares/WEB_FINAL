@@ -10,75 +10,86 @@ $string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['
 
 ?>
 <section id='doador' class='form_campo'>
-    <h2>Doador</h2>
+    <!-- <h2>Doador</h2> -->
     <form>
+
+
         <fieldset name='formulario' id='idform' onsubmit='return validarDadosObrigatorios(this)'>
-            <div id='campo_imagem'>
-                <img src='<?= $book['IMAGEM'] ?>' alt='Capa do livro <?= $book['Nome'] ?>' class='left' id='eu' onerror='this.onerror=null;this.src="./img/LivroDefault.jpg";'>
+
+
+            <div id="DadosLivro">
+                <div id='campo_imagem'>
+                    <img src='<?= $book['IMAGEM'] ?>' alt='Capa do livro <?= $book['Nome'] ?>' class='left' id='eu' onerror='this.onerror=null;this.src="./img/LivroDefault.jpg";'>
+                </div>
+
+
+                <div id="INFO">
+                    <div class='row'>
+                        <div class='form-group col-md-12'>
+                            <label for='livro-nome'>Nome do Livro</label>
+                            <input class='form-control' type='text' id='livro-nome' value='<?= $book['Nome'] ?>' disabled>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class=' row form-group col-md-4'>
+                        <label for='genero'>Gênero</label>
+                        <select name='genero' id='genero' disabled>
+                            <option value='sdas'><?= $book['GENERO'] ?></option>
+                        </select>
+                    </div>
+
+
+                    <div class='row form-group col-md-5'>
+                        <label for='condicoes'>Condição</label>
+                        <select name='condicoes' id='condicoes' disabled>
+                            <option value=''> <?= $book['CONDICAO'] ?> </option>
+                        </select>
+                    </div>
+
+                    <div class=' row'>
+                        <div class='form-group col-md-9'>
+                            <label for='obs'></label>
+                            <textarea name='observacao' id='obs' cols='50' rows='5' disabled><?= $book['DESCRICAO'] ?></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
             </div>
 
-
-            <div class='row'>
-                <div class='row'>
-                    <div class='form-group col-md-12'>
-                        <label for='livro-nome'>Nome do Livro</label>
-                        <input class='form-control' type='text' id='livro-nome' value='<?= $book['Nome'] ?>' disabled>
-                    </div>
-                </div>
-
-                
-
-
-
-                <div class='form-group col-md-5'>
-                    <label for='genero'>Gênero</label>
-                    <select name='genero' id='genero' disabled>
-                        <option value='sdas'><?= $book['GENERO'] ?></option>
-                    </select>
-                </div>
-
-
-                <div class='form-group col-md-6'>
-                    <label for='condicoes'>Condição</label>
-                    <select name='condicoes' id='condicoes' disabled>
-                        <option value='><?= $book['CONDICAO'] ?></option>
-                    </select>
-                </div>
-
-                <div class='row'>
-                    <div class='form-group col-md-9'>
-                        <label for='obs'></label>
-                        <textarea name='observacao' id='obs' cols='50' rows='5' disabled><?= $book['DESCRICAO'] ?></textarea>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
+            <hr>
+            <h2>Seus Dados</h2>
             <div class='row'>
                 <div class='form-group col-md-6'>
                     <label for='contato-nome'>Nome</label>
-                    <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' require onblur='validarnome(this)'>
+                    <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' require onblur='validarnome(this)' required>
                 </div>
 
                 <div class='form-group col-md-6'>
                     <label for='contato-sobrenome'>Sobrenome</label>
-                    <input class='form-control' type='text' id='contato-sobrenome' placeholder='Informe o sobrenome' require >
+                    <input class='form-control' type='text' id='contato-sobrenome' placeholder='Informe o sobrenome' required>
                 </div>
             </div>
 
-
+           
             <div class='row'>
                 <div class='form-group col-md-6'>
                     <label for='contato-email'>Email</label>
-                    <input class='form-control' type='email' id='contato-email' placeholder='Insira o email' require onblur='validarEmail(this)'>
+                    <input class='form-control' type='email' id='contato-email' placeholder='Insira o email' require onblur='validarEmail(this)' required>
                 </div>
             </div>
-
             <a href='<?= $api_what . $string ?>' class='btn btn-primary' target='_blank'>Entrar em Contato</a>
-
+            
 
         </fieldset>
     </form>

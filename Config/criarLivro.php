@@ -14,7 +14,7 @@ if (!empty($data)) {
     $nomeLivro = $data["nomeLivro"];
     $nome = $data["nomeDoador"] . " " . $data["sobreNomeDoador"];
     // $email = $data["email"];
-    $celular = $data["celular"];
+    $celular =   preg_replace('/[^0-9]/', '', $data["celular"]); ;
     $genero = $data["genero"];
     $observacao = $data["observacao"];
     $urlImg = $data["urlImage"];
