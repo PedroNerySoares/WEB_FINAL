@@ -60,7 +60,7 @@ $string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['
             <div class='row'>
                 <div class='form-group col-md-6'>
                     <label for='contato-nome'>Nome</label>
-                    <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' require oninput='validarnome(this)'>
+                    <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' require onblur='validarnome(this)'>
                 </div>
 
                 <div class='form-group col-md-6'>
@@ -73,7 +73,7 @@ $string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['
             <div class='row'>
                 <div class='form-group col-md-6'>
                     <label for='contato-email'>Email</label>
-                    <input class='form-control' type='email' id='contato-email' placeholder='Insira o email' require oninput='validarEmail(this)'>
+                    <input class='form-control' type='email' id='contato-email' placeholder='Insira o email' require onblur='validarEmail(this)'>
                 </div>
             </div>
 
