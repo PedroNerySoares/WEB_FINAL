@@ -2,8 +2,7 @@
 
 include_once("./Templates/Header.php");
 include_once("./Config/BuscaLivroDetalhe.php");
-// include_once("./Config/BuscarLivros.php");
-// // include_once("./Config/emai.php")
+
 
 $api_what = "https://api.whatsapp.com/send?phone=5521" . $book["CELULAR"] . "&text=";
 $string =   "Olá " . $book["DOADOR"] . ", ví seu anúncio do Livro " . $book["Nome"] . " no *AdoBook*."

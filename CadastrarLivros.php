@@ -4,13 +4,8 @@ include_once("./Templates/Header.php")
 
 
 <div class="container_cadastro" id="conteudo_cadlivro">
-    <!-- <?php include_once("templates/backbtn.html"); ?> -->
+
     <h1 id="main-title">Doe seu Livro</h1>
-    <!-- 
-    <div id="imagem-container">
-    </div> -->
-
-
     <div id="card">
         <img id="card-img" src="placeholder.jpg" style="display: none;">
     </div>
@@ -32,7 +27,7 @@ include_once("./Templates/Header.php")
 
             <div class="form-group col-md-4">
                 <label for="phone">URL da Foto:</label>
-                <input type="text" class="form-control" id="urlImage" name="urlImage" >
+                <input type="text" class="form-control" id="urlImage" name="urlImage">
 
             </div>
 
@@ -62,7 +57,7 @@ include_once("./Templates/Header.php")
 
         </fieldset>
 
-        
+
 
     </form>
 </div>

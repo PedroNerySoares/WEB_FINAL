@@ -2,12 +2,6 @@
 
 include_once("./Templates/Header.php");
 include_once("./Config/BuscarLivros.php");
-// include_once("./Config/emai.php")
-
-// $api_what = "https://api.whatsapp.com/send?phone=5521970351912&text=";
-// $string = "Olá, ví seu anúncio do Livro (XXXXXXXXXXX) no AdoBook. Ainda esta disponível? ";
-// echo ($api_what . str_replace(" ", "%20", $string));
-
 
 
 ?>
@@ -36,7 +30,6 @@ include_once("./Config/BuscarLivros.php");
         <?php foreach ($books as $book) : ?>
             
             <div class="card">
-                <!-- <img class="card-img-top" src="<?= $book["IMAGEM"] ?> alt=" Card image cap"> -->
                 <img class="card-img-top"> 
                 
                 <img class=" card-img-top" src="<?= $book["IMAGEM"] ?> 
@@ -44,10 +37,9 @@ include_once("./Config/BuscarLivros.php");
 
                 <div class="card-body">
                     <h5 class="card-title"><?= $book["Nome"]   ?></h5>
-                    <!-- <p class="card-text"><?= $book["DESCRICAO"]  ?></p> -->
+              
                     <b><p>Doador:</b><?= $book["DOADOR"]  ?></p>
-                    <b><p>Postado:</b><?= 
-                         date('d/m/Y', strtotime($book["DATA_CRIACAO"]))              ?></p>
+                    <b><p>Postado:</b><?=  date('d/m/Y', strtotime($book["DATA_CRIACAO"])) ?></p>
                     
                     <a href="<?= $BASE_URL ?>livroDetalhe.php?id=<?= $book["ID"] ?>" class="btn btn-danger">Eu quero!</a>
 

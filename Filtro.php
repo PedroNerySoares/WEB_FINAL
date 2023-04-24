@@ -19,8 +19,6 @@ include_once("./Config/BuscarLivrosFiltro.php");
                 <?php include_once("Templates/selectCondicao.html") ?>
             </div>
 
-            <!-- <button type="submit" class="mb-3 btn btn-primary">Aplicar filtro</button>
-            <button type="submit" class="mb-3 btn btn-danger">Limpar Filtro</button> -->
             <a href="<?= $BASE_URL ?>filtro.php?genero=<?= $book["ID"] ?>&condicao=<?= $book["ID"] ?>" class="btn btn-danger">Aplicar Filtro!</a>
             <a href="<?= $BASE_URL ?>index.php ?>" class="mb-3 btn btn-danger">Limpar Filtro</a>
 
@@ -33,7 +31,6 @@ include_once("./Config/BuscarLivrosFiltro.php");
         <?php foreach ($books as $book) : ?>
             
             <div class="card">
-                <!-- <img class="card-img-top" src="<?= $book["IMAGEM"] ?> alt=" Card image cap"> -->
                 <img class="card-img-top" "> 
                 
                 <img class=" card-img-top" src="<?= $book["IMAGEM"] ?> 
