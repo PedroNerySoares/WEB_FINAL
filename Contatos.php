@@ -31,7 +31,7 @@ include_once('./Templates/Header.php')
                     <div class='row'>
                         <div class='form-group col-md-6'>
                             <label for='numero-celular'>Celular</label>
-                            <input type='tel' class='form-control' id='numero-celular' placeholder='(DD) XXXXX-XXXX' name='celular' id='celular' oninput="mascaraCelular(this)">
+                            <input type='text' oninput="formatarCelular(this)" maxlength ="15" class='form-control' id='numero-celular' placeholder='(DD) XXXXX-XXXX' name='celular' id='celular'>
 
 
                         </div>

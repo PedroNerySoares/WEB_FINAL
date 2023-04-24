@@ -48,7 +48,7 @@ include_once('./Templates/Header.php')
             </div>
             <div class='form-group col-md-6'>
                 <label for='phone'>Telefone do contato:</label>
-                <input type='text' class='form-control' id='celular' name='celular' placeholder='Digite o telefone' required oninput="mascaraCelular(this)">
+                <input type='text' class='form-control' id='celular' name='celular' placeholder='Digite o telefone' oninput="formatarCelular(this)" maxlength ="15">
             </div>
 
 

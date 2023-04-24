@@ -20,40 +20,36 @@ include_once("./Config/connection.php");
   <!-- CSS -->
 
   <link rel="stylesheet" href="<?= $BASE_URL ?>Styles/styles.css">
-  <!-- <script>
-    function atualizarImagem() {
-      const input = document.getElementById('url-input');
-      const url = input.value;
-      const imagemContainer = document.getElementById('imagem-container');
 
-      // Verifica se o input está vazio
-      if (url === '') {
-        imagemContainer.innerHTML = ''; // Remove a imagem
-        return;
-      }
 
-      // Cria um novo elemento de imagem e define a URL
-      const imagem = document.createElement('img');
-      imagem.src = url;
-      imagem.width = 250;
-      imagem.height = 250;
-
-      // Remove a imagem anterior (se houver) e adiciona a nova imagem
-      imagemContainer.innerHTML = '';
-      imagemContainer.appendChild(imagem);
-    }
-  </script> -->
-  
 
 </head>
 
 <body>
-<script src="../script.js" defer> 
-</script>
+
+
+  <script>
+    function formatarCelular(input) {
+      // remove todos os caracteres que não são números do valor atual do input
+      const valorAtual = input.value.replace(/\D/g, '');
+
+      // define o formato esperado do número de celular: (##) #####-####
+      const formatoEsperado = /(\d{2})(\d{5})(\d{4})/;
+
+      // formata o valor atual do input de acordo com o formato esperado
+      const valorFormatado = valorAtual.replace(formatoEsperado, '($1) $2-$3');
+
+      // atualiza o valor do input com o número de celular formatado
+      input.value = valorFormatado;
+    }
+  </script>
+
+  <script src="../script.js" defer> 
+  </script>
   <header>
     <nav>
       <div class="logo">
-      <a href="<?= $BASE_URL ?>index.php" ><img src="<?= $BASE_URL ?>img/Logo2.png" alt="Logo"></a>
+        <a href="<?= $BASE_URL ?>index.php"><img src="<?= $BASE_URL ?>img/Logo2.png" alt="Logo"></a>
       </div>
       <ul class="menu">
         <li><a href="<?= $BASE_URL ?>index.php">Home</a></li>
@@ -65,59 +61,49 @@ include_once("./Config/connection.php");
     </nav>
   </header>
   <script>
-    function validarnome(nome){
-      if(nome.value.length <4){
-          alert("invalido")
-          form.nome.focus()
+    function validarnome(nome) {
+      if (nome.value.length < 4) {
+        alert("invalido")
+        form.nome.focus()
       }
     }
 
 
-    function validarDadosObrigatorios(form){
-      if (form.nome.value === ""){
-          alert("preenvha o nome .");
-              form.nome.focus();
-      }
-      return false;
-    }
-
-
-
-    function validarDadosObrigatorios(form){
-      if (form.nome.value === ""){
-          alert("Informe o nome completo.");
-              form.nome.focus();
+    function validarDadosObrigatorios(form) {
+      if (form.nome.value === "") {
+        alert("preenvha o nome .");
+        form.nome.focus();
       }
       return false;
     }
 
-    function mascaraCelular(cel){  
-        if(mascaraInteiro(cel)===false){
-                event.returnValue = false;
-        }       
-        return formataCampo(cel, '(00) 00000-0000', event);
+
+
+    function validarDadosObrigatorios(form) {
+      if (form.nome.value === "") {
+        alert("Informe o nome completo.");
+        form.nome.focus();
+      }
+      return false;
     }
-    
-    function validarEmail(email){
-        alert("entrei")
-    
+
+    function mascaraCelular(cel) {
+      if (mascaraInteiro(cel) === false) {
+        event.returnValue = false;
+      }
+      return formataCampo(cel, '(00) 00000-0000', event);
+    }
+
+    function validarEmail(email) {
+      alert("entrei")
+
       var filtro = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-      if(filtro.test(email.value)) {
+      if (filtro.test(email.value)) {
         return true;
       } else {
         email.value = "";
         return alert("E-mail inválido");
       }
-        
+
     }
-
-
   </script>
-  
-  
-
-  
-  
-  
-  
-  
