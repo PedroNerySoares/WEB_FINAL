@@ -5,7 +5,7 @@ include_once('./Templates/Header.php')
 <div class='containers'>
     <div class='form_campo'>
         <section id='contatos'>
-            <h2>Contato oi</h2>
+            <h2>Contato</h2>
             <form action='<?= $BASE_URL ?>config/criarContato.php' method='POST' name='formulario' id='idform' onsubmit='return validarDadosObrigatorios(this)'>
                 <fieldset id='fiel'>
                     <div class='row'>
