@@ -452,3 +452,36 @@ function formataCampo(campo, mascara, evento) {
 
 /* ************************************************************************* */
 
+function validarnome(nome){
+        if(nome.value.length <4){
+                alert("invalido")
+                form.nome.focus()
+        }
+}
+
+function validarnome(sobrenome){
+        if(sobrenome.value.length <4){
+                alert("invalido")
+                form.nome.focus()
+        }
+}
+
+function validaremail(mail){
+        var restricao = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+        if (restricao.test(mail.value)) {
+                return true;
+        }else{
+           mail.value==="";
+           return alert("email invalido")
+                
+        }        
+        
+}
+
+function validarDadosObrigatorios(form){
+        if (form.nome.value === ""){
+            alert("Informe o nome completo.");
+                form.nome.focus();
+        }
+        return false;
+    }
