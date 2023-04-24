@@ -18,9 +18,10 @@ if (!empty($data)) {
     $genero = $data["genero"];
     $observacao = $data["observacao"];
     $urlImg = $data["urlImage"];
-    echo($genero);
+    $condicao = $data["condicoes"];
 
-    $query = "INSERT INTO book (Nome, DESCRICAO, IMAGEM, DATA_CRIACAO, DOADOR,GENERO) VALUES (:Nome, :DESCRICAO, :IMAGEM, :DATA_CRIACAO, :DOADOR,:GENERO)";
+
+    $query = "INSERT INTO book (Nome, DESCRICAO, IMAGEM, DATA_CRIACAO, DOADOR,GENERO,CONDICAO,CELULAR) VALUES (:Nome, :DESCRICAO, :IMAGEM, :DATA_CRIACAO, :DOADOR,:GENERO,:CONDICAO,:CELULAR)";
 
     $stmt = $conn->prepare($query);
 
@@ -30,7 +31,8 @@ if (!empty($data)) {
     $stmt->bindParam(":GENERO", $genero);
     $stmt->bindParam(":DATA_CRIACAO",date('Y/m/d'));
     $stmt->bindParam(":DOADOR",$nome);
-    // $stmt->bindParam(":CELULAR",$celular);
+    $stmt->bindParam(":CONDICAO",$condicao);
+    $stmt->bindParam(":CELULAR",$celular);
 
 
     try {

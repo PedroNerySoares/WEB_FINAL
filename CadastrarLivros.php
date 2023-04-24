@@ -23,7 +23,7 @@ include_once("./Templates/Header.php")
             </div>
 
             <div class="form-group col-md-3">
-                <?php include_once("Templates/selectCategoria.html") ?>
+                <?php include_once("Templates/selectgenero.html") ?>
             </div>
             <div class="form-group col-md-3">
                 <?php include_once("Templates/selectCondicao.html") ?>

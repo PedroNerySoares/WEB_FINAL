@@ -5,9 +5,9 @@ include_once("./Config/BuscaLivroDetalhe.php");
 // include_once("./Config/BuscarLivros.php");
 // // include_once("./Config/emai.php")
 
-// $api_what = "https://api.whatsapp.com/send?phone=5521970351912&text=";
-// $string = "Olá, ví seu anúncio do Livro (XXXXXXXXXXX) no AdoBook. Ainda esta disponível? ";
-// echo ($api_what . str_replace(" ", "%20", $string));
+$api_what = "https://api.whatsapp.com/send?phone=5521" . $book["CELULAR"] . "&text=";
+$string =   "Olá " . $book["DOADOR"] . ", ví seu anúncio do Livro " . $book["Nome"] . " no *AdoBook*."
+    . "Ainda esta disponível? ";
 
 ?>
 <section id="doador" class="form_campo">
@@ -15,7 +15,7 @@ include_once("./Config/BuscaLivroDetalhe.php");
     <form>
         <fieldset>
             <div id="campo_imagem">
-                <img src="<?= $book["IMAGEM"] ?>" alt="vilela" class="left" id="eu">
+                <img src="<?= $book["IMAGEM"] ?>" alt="Capa do livro <?= $book["Nome"] ?>" class="left" id="eu" onerror="this.onerror=null;this.src='./img/LivroDefault.jpg';">
             </div>
 
 
@@ -39,14 +39,14 @@ include_once("./Config/BuscaLivroDetalhe.php");
                 <div class="form-group col-md-6">
                     <label for="estado">Estado</label>
                     <select name="estado" id="estado" disabled>
-                        <option value="">BOM</option>
+                        <option value=""><?= $book["CONDICAO"] ?></option>
                     </select>
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-9">
                         <label for="obs"></label>
-                        <textarea name="observacao" id="obs" cols="50" rows="5"  disabled><?= $book["DESCRICAO"] ?></textarea>
+                        <textarea name="observacao" id="obs" cols="50" rows="5" disabled><?= $book["DESCRICAO"] ?></textarea>
                     </div>
                 </div>
 
@@ -58,12 +58,12 @@ include_once("./Config/BuscaLivroDetalhe.php");
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="contato-nome">Nome</label>
-                    <input class="form-control" type="text" id="contato-nome" placeholder="Informe o nome">
+                    <input class="form-control" type="text" id="contato-nome" placeholder="Informe o nome" require>
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="contato-sobrenome">Sobrenome</label>
-                    <input class="form-control" type="text" id="contato-sobrenome" placeholder="Informe o sobrenome">
+                    <input class="form-control" type="text" id="contato-sobrenome" placeholder="Informe o sobrenome" require>
                 </div>
             </div>
 
@@ -71,12 +71,12 @@ include_once("./Config/BuscaLivroDetalhe.php");
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="contato-email">Email</label>
-                    <input class="form-control" type="email" id="contato-email" placeholder="Insira o email" onblur="validarEmail(this)">
+                    <input class="form-control" type="email" id="contato-email" placeholder="Insira o email" require>
                 </div>
             </div>
 
+            <a href="<?= $api_what . $string ?>" class="btn btn-primary" target="_blank">Entrar em Contato</a>
 
-            <button type="button" class="btn btn-primary btn-lg">Entrar em Contato</button>
 
         </fieldset>
     </form>
