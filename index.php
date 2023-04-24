@@ -30,7 +30,7 @@ include_once("./Config/BuscarLivros.php");
             <input type="submit" href="<?= $BASE_URL ?>filtro.php" value="Aplicar Filtro" class="mb-3 btn  btn btn-primary">
             <!-- <a >Limpar Filtro</a> -->
             <br>
-            <a href="<?= $BASE_URL ?>index.php ?>" class="mb-3 btn btn-danger" > Limpar </a>
+            <a href="<?= $BASE_URL ?>index.php" class="mb-3 btn btn-danger" > Limpar </a>
         </form>
     </aside>
 
@@ -40,7 +40,7 @@ include_once("./Config/BuscarLivros.php");
             
             <div class="card">
                 <!-- <img class="card-img-top" src="<?= $book["IMAGEM"] ?> alt=" Card image cap"> -->
-                <img class="card-img-top" "> 
+                <img class="card-img-top"> 
                 
                 <img class=" card-img-top" src="<?= $book["IMAGEM"] ?> 
                      alt=" Card image cap" onerror="this.onerror=null;this.src='./img/LivroDefault.jpg';">
