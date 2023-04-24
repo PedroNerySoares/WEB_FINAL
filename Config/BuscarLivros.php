@@ -4,9 +4,13 @@ include_once("url.php");
 
 session_start();
 
-$filtro = $_GET["genero"];
+// $genero = $_GET["genero"];
+// $condicao = $_GET["condicoes"];
 
-if (is_null($filtro) or $filtro==="" ) {
+// echo(is_null($condicao));
+
+
+// if ($genero<>"" and $condicao<>"") {
   $query = "SELECT * FROM book";
   // echo($data["categoria"]);
 
@@ -16,19 +20,19 @@ if (is_null($filtro) or $filtro==="" ) {
   $stmt->execute();
 
   $books = $stmt->fetchAll();
-} else {
+// } else {
 
-  $query = "SELECT * FROM book WHERE GENERO=:GENERO";
+//   $query = "SELECT * FROM book WHERE GENERO=:GENERO";
 
-  $stmt = $conn->prepare($query);
-  $stmt = $conn->prepare($query);
-  $stmt->bindParam(":GENERO", $filtro);
+//   $stmt = $conn->prepare($query);
+//   $stmt = $conn->prepare($query);
+//   $stmt->bindParam(":GENERO", $genero);
 
-  $stmt->execute();
+//   $stmt->execute();
 
-  $books = $stmt->fetchAll();
+//   $books = $stmt->fetchAll();
 
-}
+// }
 
 // FECHAR CONEXÃO
 $conn = null;

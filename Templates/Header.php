@@ -53,7 +53,7 @@ include_once("./Config/connection.php");
   <header>
     <nav>
       <div class="logo">
-        <img src="<?= $BASE_URL ?>img/Logo2.png" alt="Logo">
+      <a href="<?= $BASE_URL ?>index.php" ><img src="<?= $BASE_URL ?>img/Logo2.png" alt="Logo"></a>
       </div>
       <ul class="menu">
         <li><a href="<?= $BASE_URL ?>index.php">Home</a></li>

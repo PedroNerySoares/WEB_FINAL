@@ -24,10 +24,13 @@ include_once("./Config/BuscarLivros.php");
 
                 <?php include_once("Templates/selectCondicao.html") ?>
             </div>
-
+<!-- 
             <button type="submit" class="mb-3 btn btn-primary">Aplicar filtro</button>
-            <button type="submit" class="mb-3 btn btn-danger">Limpar Filtro</button>
-
+            <button type="submit" class="mb-3 btn btn-danger">Limpar Filtro</button> -->
+            <input type="submit" href="<?= $BASE_URL ?>filtro.php" value="Aplicar Filtro" class="mb-3 btn  btn btn-primary">
+            <!-- <a >Limpar Filtro</a> -->
+            <br>
+            <a href="<?= $BASE_URL ?>index.php ?>" class="mb-3 btn btn-danger" > Limpar </a>
         </form>
     </aside>
 
