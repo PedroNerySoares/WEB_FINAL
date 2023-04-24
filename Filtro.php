@@ -1,35 +1,29 @@
 <?php
 
 include_once("./Templates/Header.php");
-include_once("./Config/BuscarLivros.php")
+include_once("./Config/BuscarLivrosFiltro.php");
+
+
 ?>
 <div class="container_pagina">
 
     <aside>
         <h2>Filtro</h2>
-        <form id="filtro-form">
+        <form id="filtro-form" method="GET">
             <div class="mb-3">
 
-                <?php include_once("Templates/select.html") ?>
+                <?php include_once("Templates/selectGenero.html") ?>
             </div>
             <div class="mb-3">
-                <label for="marca" class="form-label">Marca:</label>
-                <select class="form-select" id="marca" name="marca">
-                    <option value="">Todas as marcas</option>
-                    <option value="marca1">Marca 1</option>
-                    <option value="marca2">Marca 2</option>
-                    <option value="marca3">Marca 3</option>
-                </select>
+
+                <?php include_once("Templates/selectCondicao.html") ?>
             </div>
-            <div class="mb-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="desconto" id="desconto" name="desconto">
-                    <label class="form-check-label" for="desconto">
-                        Mostrar somente itens com desconto
-                    </label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Aplicar filtro</button>
+
+            <!-- <button type="submit" class="mb-3 btn btn-primary">Aplicar filtro</button>
+            <button type="submit" class="mb-3 btn btn-danger">Limpar Filtro</button> -->
+            <a href="<?= $BASE_URL ?>filtro.php?genero=<?= $book["ID"] ?>&condicao=<?= $book["ID"] ?>" class="btn btn-danger">Aplicar Filtro!</a>
+            <a href="<?= $BASE_URL ?>index.php ?>" class="mb-3 btn btn-danger">Limpar Filtro</a>
+
 
         </form>
     </aside>
@@ -37,14 +31,21 @@ include_once("./Config/BuscarLivros.php")
     <section id="livros-section">
 
         <?php foreach ($books as $book) : ?>
-
+            
             <div class="card">
-                <img class="card-img-top" src="<?= $book["IMAGEM"] ?> alt=" Card image cap">
+                <!-- <img class="card-img-top" src="<?= $book["IMAGEM"] ?> alt=" Card image cap"> -->
+                <img class="card-img-top" "> 
+                
+                <img class=" card-img-top" src="<?= $book["IMAGEM"] ?> 
+                     alt=" Card image cap" onerror="this.onerror=null;this.src='./img/LivroDefault.jpg';">
+
                 <div class="card-body">
                     <h5 class="card-title"><?= $book["Nome"]   ?></h5>
-                    <p class="card-text"><?= $book["DESCRICAO"]  ?></p>
-                    <p>Doador:<?= $book["DOADOR"]  ?></p>
-                    <a href="#" class="btn btn-danger">Eu quero!</a>
+                    <!-- <p class="card-text"><?= $book["DESCRICAO"]  ?></p> -->
+                    <b><p>Doador:</b><?= $book["DOADOR"]  ?></p>
+                    <b><p>Postado:</b><?= $book["DATA_CRIACAO"]  ?></p>
+                    
+                    <a href="<?= $BASE_URL ?>livroDetalhe.php?id=<?= $book["ID"] ?>" class="btn btn-danger">Eu quero!</a>
 
 
                 </div>
@@ -55,135 +56,6 @@ include_once("./Config/BuscarLivros.php")
 
 
         <?php endforeach; ?>
-
-
-        <!-- 
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <img class="card-img-top" src="https://books.google.com.br/books/publisher/content?id=GjgQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U32CKE-XFfMvnbcz1qW0PS46Lg-Ew&w=1280" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Harry Potter - Pedra do Crack</h5>
-                <p class="card-text">saosdnaosdnaosdnaosdnaoksndaksndaolksndalsndaksndlandlansdlad.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
- -->
-
-
-
-
 
 
     </section>
