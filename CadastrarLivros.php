@@ -14,7 +14,7 @@ include_once("./Templates/Header.php")
     <div id="card">
         <img id="card-img" src="placeholder.jpg" style="display: none;">
     </div>
-    <form id="create-form" action="<?= $BASE_URL ?>config/criarLivro.php" method="POST">
+    <form id="create-form" action="<?= $BASE_URL ?>config/criarLivro.php" method="POST" class="form_campo">
         <fieldset>
             <input type="hidden" name="type" value="create">
             <div class="form-group col-md-4">

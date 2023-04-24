@@ -10,7 +10,7 @@ include_once("./Config/BuscaLivroDetalhe.php");
 // echo ($api_what . str_replace(" ", "%20", $string));
 
 ?>
-<section id="doador">
+<section id="doador" class="form_campo">
     <h2>Doador</h2>
     <form>
         <fieldset>
