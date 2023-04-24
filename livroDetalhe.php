@@ -14,7 +14,7 @@ $string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['
     <form>
         <fieldset name='formulario' id='idform' onsubmit='return validarDadosObrigatorios(this)'>
             <div id='campo_imagem'>
-                <img src='<?= $book['IMAGEM'] ?>' alt='Capa do livro <?= $book['Nome'] ?>' class='left' id='eu' onerror='this.onerror=null;this.src='./img/LivroDefault.jpg';'>
+                <img src='<?= $book['IMAGEM'] ?>' alt='Capa do livro <?= $book['Nome'] ?>' class='left' id='eu' onerror='this.onerror=null;this.src="./img/LivroDefault.jpg";'>
             </div>
 
 
@@ -60,12 +60,12 @@ $string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['
             <div class='row'>
                 <div class='form-group col-md-6'>
                     <label for='contato-nome'>Nome</label>
-                    <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' require onblur='velidarnome(this)'>
+                    <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' require oninput='validarTamNome(this)'>
                 </div>
 
                 <div class='form-group col-md-6'>
                     <label for='contato-sobrenome'>Sobrenome</label>
-                    <input class='form-control' type='text' id='contato-sobrenome' placeholder='Informe o sobrenome' require onblur='validarsobrenome(this)'>
+                    <input class='form-control' type='text' id='contato-sobrenome' placeholder='Informe o sobrenome' require >
                 </div>
             </div>
 
@@ -73,7 +73,7 @@ $string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['
             <div class='row'>
                 <div class='form-group col-md-6'>
                     <label for='contato-email'>Email</label>
-                    <input class='form-control' type='email' id='contato-email' placeholder='Insira o email' require onblur='validarEmail(this)'>
+                    <input class='form-control' type='email' id='contato-email' placeholder='Insira o email' require oninput='validarEmail(this)'>
                 </div>
             </div>
 
