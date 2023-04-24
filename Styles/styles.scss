@@ -209,4 +209,28 @@ h2 {
     border: 2px solid #f95842 ;
     margin-right: 300px;
     
-  }
+}
+
+@media screen and (max-width: 899px){
+    #campo_imagem{
+        display: none;
+    }
+    .cont{
+        width: 90%;
+    }
+    .form-control{
+        flex-direction: column;
+        overflow: scroll;
+        flex-wrap: nowrap;
+        max-height: 15rem;
+        padding-right: 5rem;
+    }
+    #conteudo_sobrenos{
+        width: 90%;
+        height: auto;
+    }
+
+
+
+
+}

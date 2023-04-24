@@ -1,3 +1,96 @@
+const form = document.querySelector("#form")
+const nameinput = document.querySelector("#contato-nome") 
+const sobrenameinput = document.querySelector("#contato-sobrenome") 
+const emailinput = document.querySelector("#contato-email")
+const numeroCelularinput = document.querySelector("#numero-celular")
+const nameLivroinput = document.querySelector("#nomeLivro") 
+const URLimageinput = document.querySelector("#urlImage") 
+const nomeDoadorinput = document.querySelector("#nomeDoador") 
+const sobreNomeDoadorinput = document.querySelector("#sobreNomeDoador") 
+const marcaSelect = document.querySelector("#marca")
+const descontoCheck = document.querySelector("#desconto")
+const observacaoTextArea = document.querySelector("#observacao")
+
+form.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        if (sobrenameinput.value === ""){
+                alert("preencha o sobrenome");
+                return;
+
+        }
+        if (nameinput.value === ""){
+                alert("preencha o nome");
+                return;
+
+        }
+        if (nameLivroinput.value === ""){
+                alert("preencha o nome do livro");
+                return;
+
+        }
+        if (URLimageinput.value === ""){
+                alert("preencha a url da imagem");
+                return;
+
+        }
+        if (nomeDoadorinput.value === ""){
+                alert("preencha o nome do doador");
+                return;
+
+        }
+        if (sobreNomeDoadorinput.value === ""){
+                alert("preencha o sobrenome do doador");
+                return;
+
+        }
+        if (emailinput.value === "" || !isemailvalid(emailinput.value)){
+                alert("preencha o nome");
+                return;
+
+        }
+        if (marcaSelect.value === ""){
+                alert("selecione a marca");
+                return;
+
+        }
+        if (descontoCheck.value === ""){
+                alert("selecione o desconto");
+                return;
+
+        }
+        if (observacaoTextArea.value === ""){
+                alert("Coloque uma observação");
+                return;
+
+        }
+
+
+
+
+        form.submit();
+});
+
+
+function isemailvalid(emailput){
+        const emailputRegex = new RegExp(
+                /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
+        );
+        if (emailputRegex.test(emailput)){
+                return true
+        }
+        return false
+}
+
+function validarTel(numeroCelularinput){
+        exp = /\(\d{2}\)\ \d{4,5}\-\d{4}/;
+        if (!exp.test(numeroCelularinput.value)){
+                numeroCelularinput.value = "";
+                alert('Numero de telefone invalido');
+        }
+}
+
+
+
 
 
 
