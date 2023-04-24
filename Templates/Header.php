@@ -48,7 +48,7 @@ include_once("./Config/connection.php");
 </head>
 
 <body>
-<script src="../script.js"> 
+<script src="../script.js" defer> 
 </script>
   <header>
     <nav>

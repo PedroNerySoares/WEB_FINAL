@@ -71,6 +71,36 @@ form.addEventListener("submit",(event)=>{
 });
 
 
+form.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        form.submit();
+});
+
+
+form.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        form.submit();
+});
 function isemailvalid(emailput){
         const emailputRegex = new RegExp(
                 /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
