@@ -38,17 +38,17 @@ include_once('./Templates/Header.php')
             <div class=' col-md-6 row'>
                 <div class='form-group col-md-6'>
                     <label for='nome'>Nome</label>
-                    <input type='text' class='form-control' id='nomeDoador' name='nomeDoador' placeholder='Digite o primeiro nome' required onabort='validarnome(this)'>
+                    <input type='text' class='form-control' id='nomeDoador' name='nomeDoador' placeholder='Digite o primeiro nome' required oninput='validarTamNome(this)'>
                 </div>
                 <div class='form-group col-md-6'>
                     <label for='nome'>Sobrenome:</label>
-                    <input type='text' class='form-control' id='sobreNomeDoador' name='sobreNomeDoador' placeholder='Digite o Sobrenome' required onblur='validarsobrenome(this)'>
+                    <input type='text' class='form-control' id='sobreNomeDoador' name='sobreNomeDoador' placeholder='Digite o Sobrenome' required >
                 </div>
 
             </div>
             <div class='form-group col-md-6'>
                 <label for='phone'>Telefone do contato:</label>
-                <input type='text' class='form-control' id='celular' name='celular' placeholder='Digite o telefone' required>
+                <input type='text' class='form-control' id='celular' name='celular' placeholder='Digite o telefone' required oninput="mascaraCelular(this)">
             </div>
 
 
@@ -62,14 +62,7 @@ include_once('./Templates/Header.php')
     </form>
 </div>
 
-<script>
-    function validarnome(nome){
-        if(nome.value.length <4){
-                alert('invalido')
-                form.nome.focus()
-        }
-}
-</script>
+
 <?php
 include_once('./Templates/Footer.php')
 ?>

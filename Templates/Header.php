@@ -64,3 +64,45 @@ include_once("./Config/connection.php");
       </ul>
     </nav>
   </header>
+  <script>
+    function validarnome(nome){
+      if(nome.value.length <4){
+          alert("invalido")
+          form.nome.focus()
+      }
+    }
+
+
+    function validarDadosObrigatorios(form){
+      if (form.nome.value === ""){
+          alert("Informe o nome completo.");
+              form.nome.focus();
+      }
+      return false;
+    }
+
+
+
+    function validarDadosObrigatorios(form){
+      if (form.nome.value === ""){
+          alert("Informe o nome completo.");
+              form.nome.focus();
+      }
+      return false;
+    }
+
+    function mascaraCelular(cel){  
+        if(mascaraInteiro(cel)===false){
+                event.returnValue = false;
+        }       
+        return formataCampo(cel, '(00) 00000-0000', event);
+    }
+  </script>
+  
+  
+
+  
+  
+  
+  
+  
