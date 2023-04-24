@@ -38,7 +38,7 @@ include_once('./Templates/Header.php')
             <div class=' col-md-6 row'>
                 <div class='form-group col-md-6'>
                     <label for='nome'>Nome</label>
-                    <input type='text' class='form-control' id='nomeDoador' name='nomeDoador' placeholder='Digite o primeiro nome' required oninput='validarTamNome(this)'>
+                    <input type='text' class='form-control' id='nomeDoador' name='nomeDoador' placeholder='Digite o primeiro nome' required oninput='validarnome(this)'>
                 </div>
                 <div class='form-group col-md-6'>
                     <label for='nome'>Sobrenome:</label>

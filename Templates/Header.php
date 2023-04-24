@@ -75,7 +75,7 @@ include_once("./Config/connection.php");
 
     function validarDadosObrigatorios(form){
       if (form.nome.value === ""){
-          alert("Informe o nome completo.");
+          alert("preenvha o nome .");
               form.nome.focus();
       }
       return false;
@@ -97,6 +97,21 @@ include_once("./Config/connection.php");
         }       
         return formataCampo(cel, '(00) 00000-0000', event);
     }
+    
+    function validarEmail(email){
+        alert("entrei")
+    
+      var filtro = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      if(filtro.test(email.value)) {
+        return true;
+      } else {
+        email.value = "";
+        return alert("E-mail inválido");
+      }
+        
+    }
+
+
   </script>
   
   

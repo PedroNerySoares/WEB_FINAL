@@ -11,7 +11,7 @@ include_once('./Templates/Header.php')
                     <div class='row'>
                         <div class='form-group col-md-4'>
                             <label for='contato-nome'>Nome</label>
-                            <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' name='nome' id='nome' oninput ='validarTamNome(this)'>
+                            <input class='form-control' type='text' id='contato-nome' placeholder='Informe o nome' name='nome' id='nome' oninput ='validarnome(this)'>
                         </div>
 
                         <div class='form-group col-md-4'>
