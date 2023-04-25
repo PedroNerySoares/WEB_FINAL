@@ -15,6 +15,7 @@ if (!empty($_GET)) {
     $stmt = $conn->prepare($query);
     $stmt->bindParam(":GENERO",   $genero);
     $stmt->bindParam(":CONDICAO", $condicao);
+
   } elseif ($genero <> "") {
 
     $query = "SELECT * FROM book WHERE GENERO=:GENERO ";

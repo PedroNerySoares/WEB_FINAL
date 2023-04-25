@@ -11,13 +11,13 @@ header nav {
   width: 100vw;
   height: 12vh;
 }
-header nav a {
+header nav .menuBotao {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #000;
   margin: left 40px;
   transition: all 0.3s ease-in-out;
 }
-header nav a:hover {
+header nav .menuBotao:hover {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.58);
   color: white;

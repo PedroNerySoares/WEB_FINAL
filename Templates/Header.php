@@ -11,7 +11,7 @@ include_once("./Config/connection.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agenda de Contatos</title>
+  <title>AdoBook</title>
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
   <!-- FONT AWESOME -->
@@ -28,23 +28,8 @@ include_once("./Config/connection.php");
 <body>
 
 
-  <script>
-    function formatarCelular(input) {
-      // remove todos os caracteres que não são números do valor atual do input
-      const valorAtual = input.value.replace(/\D/g, '');
 
-      // define o formato esperado do número de celular: (##) #####-####
-      const formatoEsperado = /(\d{2})(\d{5})(\d{4})/;
-
-      // formata o valor atual do input de acordo com o formato esperado
-      const valorFormatado = valorAtual.replace(formatoEsperado, '($1) $2-$3');
-
-      // atualiza o valor do input com o número de celular formatado
-      input.value = valorFormatado;
-    }
-  </script>
-
-  <script src="../script.js" defer> 
+  <script src="../script.js" defer>
   </script>
   <header>
     <nav>
@@ -52,10 +37,10 @@ include_once("./Config/connection.php");
         <a href="<?= $BASE_URL ?>index.php"><img src="<?= $BASE_URL ?>img/Logo2.png" alt="Logo"></a>
       </div>
       <ul class="menu">
-        <li><a href="<?= $BASE_URL ?>index.php">Home</a></li>
-        <li><a href="<?= $BASE_URL ?>CadastrarLivros.php">Cadastrar Livros</a></li>
-        <li><a href="<?= $BASE_URL ?>QuemSomos.php">Quem Somos</a></li>
-        <li><a href="<?= $BASE_URL ?>Contatos.php">Contato</a></li>
+        <li><a class="menuBotao" href="<?= $BASE_URL ?>index.php">Home</a></li>
+        <li><a class="menuBotao" href="<?= $BASE_URL ?>CadastrarLivros.php">Cadastrar Livros</a></li>
+        <li><a class="menuBotao" href="<?= $BASE_URL ?>QuemSomos.php">Quem Somos</a></li>
+        <li><a class="menuBotao" href="<?= $BASE_URL ?>Contatos.php">Contato</a></li>
 
       </ul>
     </nav>
@@ -95,7 +80,6 @@ include_once("./Config/connection.php");
     }
 
     function validarEmail(email) {
-      alert("entrei")
 
       var filtro = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
       if (filtro.test(email.value)) {
@@ -103,7 +87,22 @@ include_once("./Config/connection.php");
       } else {
         email.value = "";
         return alert("E-mail inválido");
+        input.focus
       }
 
+    }
+
+    function formatarCelular(input) {
+      // remove todos os caracteres que não são números do valor atual do input
+      const valorAtual = input.value.replace(/\D/g, '');
+
+      // define o formato esperado do número de celular: (##) #####-####
+      const formatoEsperado = /(\d{2})(\d{5})(\d{4})/;
+
+      // formata o valor atual do input de acordo com o formato esperado
+      const valorFormatado = valorAtual.replace(formatoEsperado, '($1) $2-$3');
+
+      // atualiza o valor do input com o número de celular formatado
+      input.value = valorFormatado;
     }
   </script>
