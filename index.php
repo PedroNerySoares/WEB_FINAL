@@ -61,7 +61,7 @@ include_once("./Config/BuscarLivros.php");
         <?php elseif (empty($_GET)) : ?>
             <p id="empty-list-text">Ainda não há livros cadastrados, <a href="<?= $BASE_URL ?>CadastrarLivros.php">Cadastrar Livros</a>.</p>
         <?php else : ?>
-            <p id="empty-list-text">Não Foi localizado nenhum livro com este filtro.<a href="<?= $BASE_URL ?>index.php">Voltar para Home</a></p>
+            <p id="empty-list-text">Não Foi localizado nenhum livro com este filtro. <a href="<?= $BASE_URL ?>index.php">Voltar para Home</a></p>
         <?php endif; ?>
 
 

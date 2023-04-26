@@ -35,8 +35,8 @@ $string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['
 
 
 
-                    <div class=' row form-group col-md-4'>
-                        <label for='genero'>Gênero</label>
+                    <div class=' row form-group col-md-5'>
+                        <label for='genero'>Gênero: </label>
                         <select name='genero' id='genero' disabled>
                             <option value='sdas'><?= $book['GENERO'] ?></option>
                         </select>
@@ -44,9 +44,9 @@ $string =   'Olá ' . $book['DOADOR'] . ', ví seu anúncio do Livro ' . $book['
 
 
                     <div class='row form-group col-md-5'>
-                        <label for='condicoes'>Condição</label>
+                        <label for='condicoes' >Condição: </label>
                         <select name='condicoes' id='condicoes' disabled>
-                            <option value=''> <?= $book['CONDICAO'] ?> </option>
+                            <option value='' > <?= $book['CONDICAO'] ?> </option>
                         </select>
                     </div>
 
